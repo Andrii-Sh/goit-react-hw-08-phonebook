@@ -45,12 +45,12 @@ export const ContactForm = () => {
             required
           />
         </Label>
-        <Label htmlFor="phone">
+        <Label htmlFor="number">
           Number
           <Input
             type="tel"
-            name="phone"
-            id="phone"
+            name="number"
+            id="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required

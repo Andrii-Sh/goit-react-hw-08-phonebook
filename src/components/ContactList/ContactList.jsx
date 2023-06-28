@@ -12,7 +12,7 @@ export const ContactList = () => {
         {filtredContacts.map(item => {
           return (
             <ContactItem key={item.id}>
-              <Contact id={item.id} name={item.name} number={item.phone} />
+              <Contact id={item.id} name={item.name} number={item.number} />
             </ContactItem>
           );
         })}

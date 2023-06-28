@@ -1,7 +1,7 @@
 import { useEffect, lazy } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-// import { fetchContacts } from '../../redux/contacts/operations';
+import { refreshUser } from '../../redux/auth/authOperations';
 // import { useSelector } from 'react-redux';
 // import { selectContacts } from '../../redux/contacts/selectors';
 import Layout from '../../components/Layout/Layout';
@@ -16,12 +16,12 @@ const LoginPage = lazy(() => import('../../pages/Login'));
 const ContactsPage = lazy(() => import('../../pages/Contacts'));
 
 export const App = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   // const { isLoading, error } = useSelector(selectContacts);
 
-  // useEffect(() => {
-  //   dispatch(fetchContacts());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
 
   return (
     <div>
@@ -34,14 +34,5 @@ export const App = () => {
         </Route>
       </Routes>
     </div>
-
-    // <Container>
-    //   <Title>Phonebook</Title>
-    //   <ContactForm />
-    //   <Subtitle>Contacts</Subtitle>
-    //   <Filter />
-    //   {isLoading && !error && <b>Loading contacts...</b>}
-    //   <ContactList />
-    // </Container>
   );
 };
