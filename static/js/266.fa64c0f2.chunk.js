@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[266],{1266:function(e,r,a){a.r(r);var n=a(184);r.default=function(){return(0,n.jsx)("div",{children:(0,n.jsxs)("h1",{children:["The BEST Home page!!!",(0,n.jsx)("span",{role:"img","aria-label":"Greeting icon",children:"\ud83d\udc81\u200d\u2640\ufe0f"})]})})}}}]);
+//# sourceMappingURL=266.fa64c0f2.chunk.js.map
