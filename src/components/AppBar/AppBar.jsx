@@ -3,21 +3,25 @@ import { Navigation } from '../Navigation/Navigation';
 import { UserMenu } from '../UserMenu/UserMenu';
 import { AuthNav } from '../AuthNav/AuthNav';
 import authSelectors from '../../redux/auth/authSelectors';
-// import {  } from "../UserMenu/UserMenu";
-// import { useAuth } from 'hooks';
-// import css from './AppBar.module.css';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
 
-const AppBar = () => {
+// import Button from '@mui/material/Button';
+
+const AppBarComponent = () => {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
 
   return (
-    <header>
-      <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
-      {/* <AuthNav /> */}
-      {/* <UserMenu /> */}
-    </header>
+    <Box sx={{ flexGrow: 1 }} sx={{ mb: 5 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Navigation />
+          {isLoggedIn ? <UserMenu /> : <AuthNav />}
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 };
 
-export default AppBar;
+export default AppBarComponent;

@@ -1,15 +1,19 @@
 import { NavLink } from 'react-router-dom';
-// import { useAuth } from 'hooks';
-// import css from './Navigation.module.css';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 export const Navigation = () => {
-  //   const { isLoggedIn } = useAuth();
-
   return (
     <nav>
-      <NavLink to="/">Home</NavLink>
-      {/* {isLoggedIn && <NavLink to="/tasks">Tasks</NavLink>} */}
-      <NavLink to="/contacts">Contacts</NavLink>
+      <Stack direction="row" spacing={2}>
+        <NavLink to="/">
+          <Button variant="contained">Home</Button>
+        </NavLink>
+
+        <NavLink to="/contacts">
+          <Button variant="contained">Contacts</Button>
+        </NavLink>
+      </Stack>
     </nav>
   );
 };

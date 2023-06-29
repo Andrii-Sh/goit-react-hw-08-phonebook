@@ -1,16 +1,24 @@
 import { useSelector, useDispatch } from 'react-redux';
 import authSelectors from '../../redux/auth/authSelectors';
 import { logOut } from '../../redux/auth/authOperations';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 export const UserMenu = () => {
   const email = useSelector(authSelectors.getEmail);
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <Stack direction="row" spacing={2} sx={{ ml: 'auto' }}>
       <p>{email}</p>
-      <button onClick={() => dispatch(logOut())}></button>
-    </div>
+      <Button
+        variant="contained"
+        sx={{ ml: 0 }}
+        onClick={() => dispatch(logOut())}
+      >
+        Log Out
+      </Button>
+    </Stack>
   );
 };
 
