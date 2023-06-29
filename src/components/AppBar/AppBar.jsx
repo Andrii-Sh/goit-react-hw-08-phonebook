@@ -13,7 +13,7 @@ const AppBarComponent = () => {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
 
   return (
-    <Box sx={{ flexGrow: 1 }} sx={{ mb: 5 }}>
+    <Box sx={{ flexGrow: 1, mb: 5 }}>
       <AppBar position="static">
         <Toolbar>
           <Navigation />

@@ -3,6 +3,7 @@ import authSelectors from '../../redux/auth/authSelectors';
 import { logOut } from '../../redux/auth/authOperations';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 export const UserMenu = () => {
   const email = useSelector(authSelectors.getEmail);
@@ -10,7 +11,9 @@ export const UserMenu = () => {
 
   return (
     <Stack direction="row" spacing={2} sx={{ ml: 'auto' }}>
-      <p>{email}</p>
+      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        {email}
+      </Typography>
       <Button
         variant="contained"
         sx={{ ml: 0 }}
