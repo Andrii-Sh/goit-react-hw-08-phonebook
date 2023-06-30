@@ -12,7 +12,7 @@ import { Formik } from 'formik';
 
 const initialValues = {
   name: '',
-  phone: '',
+  number: '',
 };
 
 export const ContactForm = () => {
