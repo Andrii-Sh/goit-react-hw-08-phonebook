@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[266],{1266:function(e,n,t){t.r(n);var r=t(890),a=t(184);n.default=function(){return(0,a.jsx)("div",{children:(0,a.jsxs)(r.Z,{variant:"h3",component:"h1",align:"center",sx:{mt:10},children:["The Best Home Page!!!",(0,a.jsx)("span",{role:"img","aria-label":"Greeting icon",children:"\ud83d\udc81\u200d\u2640\ufe0f"})]})})}}}]);
+//# sourceMappingURL=266.a1333e82.chunk.js.map
