@@ -1,6 +1,6 @@
 import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { refreshUser } from '../../redux/auth/authOperations';
 import Layout from '../../components/Layout/Layout';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
@@ -47,6 +47,7 @@ export const App = () => {
               </PrivateRoute>
             }
           />
+          <Route path="*" element={<Navigate to="/" replace={true} />}></Route>
         </Route>
       </Routes>
     </div>

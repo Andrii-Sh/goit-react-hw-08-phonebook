@@ -14,7 +14,7 @@ export const LoginForm = () => {
     const form = e.currentTarget;
 
     try {
-      dispatch(
+      await dispatch(
         logIn({
           email: form.elements.email.value,
           password: form.elements.password.value,
@@ -22,8 +22,9 @@ export const LoginForm = () => {
       ).unwrap();
       toast.success('Welcome!');
       form.reset();
-    } catch (error) {}
-    toast.error('Error logIn!');
+    } catch (error) {
+      toast.error('Error logIn!');
+    }
   };
 
   return (
